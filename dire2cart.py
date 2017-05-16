@@ -26,7 +26,7 @@ z_cartesian = []
 tf = []
 
 start_num = 9 # With Selected T T T, coordination starts from line 9
-if 'S' not  in line[8]: 
+if 'S' not  in line[7]: 
     start_num = 8 # without Selected, No  T T T , coordination starts from line 8 
 
 for i in range(start_num, num_atoms + start_num):
@@ -43,7 +43,7 @@ file_out = open('POSCAR_C', 'a')
 for i in range(0,7):
     file_out.write(line[i].rstrip() + '\n')  # first 7 lines are kept the same 
 
-if 'S' in line[8]:
+if 'S' in line[7]:
     file_out.write(line[8].rstrip()+ '\n')  # if  T T T exists, write the Selective line 
 file_out.write('Cartesian' + '\n')          # Coordination system is Cartesian now. 
 
