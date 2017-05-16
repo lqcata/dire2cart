@@ -44,7 +44,7 @@ for i in range(0,7):
     file_out.write(line[i].rstrip() + '\n')  # first 7 lines are kept the same 
 
 if 'S' in line[7]:
-    file_out.write(line[8].rstrip()+ '\n')  # if  T T T exists, write the Selective line 
+    file_out.write(line[7].rstrip()+ '\n')  # if  T T T exists, write the Selective line 
 file_out.write('Cartesian' + '\n')          # Coordination system is Cartesian now. 
 
 for i in range(0,len(x_cartesian)):
